@@ -1,0 +1,18 @@
+#!/bin/bash
+
+rm -fr .3hh.tmp.1/
+mkdir .3hh.tmp.1/
+cd .3hh.tmp.1/
+pwd
+
+FILE="../3hh.txt"
+cat $FILE | while read LINE
+do
+wget -nv "$LINE" | grep  "200 OK"
+done
+echo занчит нужно легко и только для моей психики..
+ls -Clah ./
+pwd
+ls -1 | wc -l
+cd ../
+pwd
